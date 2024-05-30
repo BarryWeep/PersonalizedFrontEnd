@@ -1,0 +1,240 @@
+/*-----------------------------------------
+General
+------------------------------------------*/
+:root {
+    --font-default: 'Poppins', sans-serif;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+    --font-heading: 'Anton', sans-serif;
+    --bs-list-group-bg: #343a40; /* Dark background color */
+    --bs-list-group-color: #ffffff; /* White text color */
+    --topNavbarWidth: 305px;
+    --topNavbarWidthMargin: 304px;
+    --topNavbarHeight: 55px;
+    --sidebar-capsize: 16px;
+  }
+
+  :root {
+    --color-default: #222222;
+    --color-primary: #2596be;
+    --color-secondary: #030303;
+    --bg-dark-color: #12151e;
+  }
+
+
+
+body
+{
+  margin: 0;
+  color: white !important;
+  background-color: #12151e;
+  overflow-x: hidden !important;
+}
+
+h1,h2,h3,h4,h5,p,div
+{
+  color: white !important;
+}
+  
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+/******************************************************Side Bar*/
+.card
+{
+  color: white;
+  background-color: var(--bg-dark-color);
+}
+
+.PersonInforcard
+{
+  height: 500px;
+  overflow: auto;
+}
+
+
+.fixInforcard
+{
+  height: 400px;
+  overflow: auto;
+}
+
+.sidebar-nav
+{
+  top: var(--topNavbarHeight) !important;
+  width: var(--topNavbarWidth) !important;
+  height: calc(100% - var(--topNavbarHeight)) ;
+}
+
+
+.sidebar-cap
+{
+  color: #adb5bd;
+  font-size: var(--sidebar-capsize);
+  font-weight: bold;
+
+}
+
+
+.navbar-dark .nav-link:hover
+{
+  background-color: black !important;
+  padding: 3,3,3,3 !important;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.sidebar-link .dropDownArrow {
+  display: inline-block;
+  transition: all ease 0.25s;
+}
+
+/* Explicitly defining the initial state might not be necessary, but you can try if there are issues */
+.sidebar-link[aria-expanded="false"] .dropDownArrow {
+  transform: rotate(0deg);
+}
+
+.sidebar-link[aria-expanded="true"] .dropDownArrow {
+  rotate: 180deg !important;
+}
+
+
+.text-muted
+{
+  color: grey !important;
+}
+
+/************************************************************main section  and module*/
+
+
+.ViewTab
+{
+  display: none;
+}
+
+
+.active
+{
+  display: block !important;
+}
+
+
+.noscroll {
+  overflow: hidden !important;
+}
+
+
+
+@media (min-width:992px)
+{
+  body{
+    overflow: auto !important;
+  }
+
+  /*
+  top: var(--topNavbarHeight) !important;
+  width: var(--topNavbarWidth) !important;
+  height: calc(100% - var(--topNavbarHeight)) ;
+*/
+  .WithSidebar{
+    position: relative;
+    left: calc(var(--topNavbarWidth) + 1%) !important;
+    width: calc(97% - var(--topNavbarWidth)) !important;
+  }
+  
+  .WithoutSidebar{
+    position: static;
+    left: 0 !important; /* Or whatever new value you need */
+    width:100%;
+    overflow-y: hidden;
+  }
+}
+
+.corona-gradient-card {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045); /* Adjust gradient colors as needed */
+  color: white; /* Text color */
+}
+
+.gradient-corona-img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/********************************************************/
+/***** card table*/
+
+.card-table
+{
+  overflow: auto;
+  height: 300px;
+}
+
+
+.card-table tr
+{
+  cursor: pointer;
+}
+
+
+
+/**************************************footer*/
+
+footer
+{
+  margin-top: 150px;
+}
+
+
+
+/****************************************Edit Pen */
+
+.popboxEdit{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/**************************slider */
+
+.carousel-inner
+{
+  height: 550px !important;
+  overflow-y: auto;
+}
+
+
+.carousel_container
+{
+
+  padding-bottom: 150px;
+
+}
+
+
+/********************************select imge */
+
+.selectable-img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.selectable-img:hover {
+  transform: scale(1.1);
+}
+
+/**********************************Avatart */
+
+.avatar {
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
